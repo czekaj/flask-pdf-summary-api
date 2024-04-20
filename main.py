@@ -76,7 +76,8 @@ app = Flask(__name__)
 def pdfsummary():
     try:
         # Load the OpenAI API key
-        openai.api_key = open_file('openaiapikey.txt')
+        openai.api_key = os.getenv(
+            'OPENAI_API_KEY') or open_file('openaiapikey.txt')
 
         print('Request received', request)
 
