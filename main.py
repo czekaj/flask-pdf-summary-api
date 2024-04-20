@@ -22,8 +22,7 @@ def save_file(filepath, content):
         with open(filepath, 'w', encoding='utf-8') as outfile:
             outfile.write(content)
     except Exception as e:
-        print(f"An error occurred while saving the file '{
-              filepath}': {str(e)}")
+        print(f"An error occurred while saving the file '{filepath}': {str(e)}")
         return False  # Return False if an error occurs
     return True  # Return True if the file was saved successfully
 
