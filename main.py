@@ -70,6 +70,11 @@ app = Flask(__name__)
 # Define a route for the endpoint
 
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify(['Welcome to the PDF summary API!']), 200
+
+
 @app.route('/pdfsummary', methods=['POST'])
 def pdfsummary():
     try:
