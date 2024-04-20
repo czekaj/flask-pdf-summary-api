@@ -13,8 +13,7 @@ def open_file(filepath):
         with open(filepath, 'r', encoding='utf-8') as infile:
             return str.strip(infile.read())
     except Exception as e:
-        print(f"An error occurred while opening the file '{
-              filepath}': {str(e)}")
+        print(f"An error occurred while opening the file '{filepath}': {str(e)}")
         return None  # Return None if an error occurs
 
 
